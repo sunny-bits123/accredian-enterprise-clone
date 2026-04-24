@@ -1,59 +1,61 @@
-"use client";
-
-export default function Hero() {
+const Hero = () => {
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="animate-fadeIn">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              <span>Transform Your</span>{" "}
-              <span className="gradient-text">Career Today</span>
-            </h1>
+    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto text-center">
+        {/* Badge */}
+        <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full border border-primary/30">
+          <span className="text-sm font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            ✨ Welcome to Accredian Enterprise
+          </span>
+        </div>
 
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Join 500K+ professionals learning from industry experts. Get
-              certified, get hired, get ahead.
-            </p>
+        {/* Main Headline */}
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Transform Your Organization's
+          <span className="block bg-gradient-to-r from-primary via-purple-400 to-accent bg-clip-text text-transparent">
+            Learning Future
+          </span>
+        </h1>
 
-            {/* CTA Buttons */}
-            <div className="flex gap-4 mb-12">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-bold hover:shadow-lg transition transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition">
-                Watch Demo
-              </button>
-            </div>
+        {/* Subheading */}
+        <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+          Empower your team with cutting-edge courses, personalized learning paths, and measurable skill development.
+        </p>
 
-            {/* Stats */}
-            <div className="flex gap-8 text-center">
-              <div>
-                <p className="text-3xl font-bold gradient-text">500K+</p>
-                <p className="text-gray-600">Active Learners</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold gradient-text">1000+</p>
-                <p className="text-gray-600">Courses Available</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold gradient-text">98%</p>
-                <p className="text-gray-600">Success Rate</p>
-              </div>
-            </div>
+        {/* Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div className="glass rounded-lg p-6">
+            <div className="text-3xl font-bold text-primary">500K+</div>
+            <div className="text-slate-400 text-sm mt-1">Active Learners</div>
           </div>
-
-          {/* Right Image */}
-          <div className="hidden md:block animate-slideIn">
-            <div className="bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl p-1 transform -rotate-3 hover:rotate-0 transition">
-              <div className="bg-white rounded-2xl h-96 flex items-center justify-center">
-                <span className="text-6xl">🚀</span>
-              </div>
-            </div>
+          <div className="glass rounded-lg p-6">
+            <div className="text-3xl font-bold text-primary">1000+</div>
+            <div className="text-slate-400 text-sm mt-1">Expert Courses</div>
+          </div>
+          <div className="glass rounded-lg p-6">
+            <div className="text-3xl font-bold text-primary">98%</div>
+            <div className="text-slate-400 text-sm mt-1">Success Rate</div>
           </div>
         </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="px-8 py-4 bg-gradient-to-r from-primary to-accent rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all hover:scale-105">
+            Start Free Trial
+          </button>
+          <button className="px-8 py-4 border border-slate-500 rounded-lg font-semibold hover:bg-slate-800 transition-all">
+            Watch Demo
+          </button>
+        </div>
+      </div>
+
+      {/* Decorative elements */}
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="h-96 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl blur-xl opacity-50" />
+        <div className="h-96 bg-gradient-to-br from-accent/20 to-transparent rounded-2xl blur-xl opacity-50" />
       </div>
     </section>
-  );
+  )
 }
+
+export default Hero

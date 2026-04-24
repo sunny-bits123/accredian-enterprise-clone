@@ -1,43 +1,29 @@
-"use client";
-
-export default function CTA() {
+const CTA = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn">
-          Ready to Transform Your Career?
+    <section className="section bg-gradient-to-r from-primary/20 to-accent/20">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          Ready to Transform Your Organization's Learning?
         </h2>
-
-        <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto animate-slideUp">
-          Join thousands of professionals who have already taken the next step.
-          Start your free 7-day trial today—no credit card required.
+        <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
+          Join thousands of companies that are revolutionizing how their teams learn and grow.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-slideUp">
-          <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:shadow-lg transition transform hover:scale-105">
-            Start Free Trial
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="px-8 py-4 bg-gradient-to-r from-primary to-accent rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all hover:scale-105">
+            Start Your Free Trial
           </button>
-          <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition">
-            Schedule Demo
+          <button className="px-8 py-4 border border-slate-500 rounded-lg font-semibold hover:bg-slate-800 transition-all">
+            Schedule a Demo
           </button>
         </div>
 
-        {/* Key Stats */}
-        <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/20">
-          <div>
-            <p className="text-3xl font-bold">500K+</p>
-            <p className="text-sm text-white/80">Active Learners</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold">98%</p>
-            <p className="text-sm text-white/80">Success Rate</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold">10K+</p>
-            <p className="text-sm text-white/80">Companies</p>
-          </div>
-        </div>
+        <p className="text-slate-400 text-sm mt-8">
+          No credit card required • 14-day free trial • Cancel anytime
+        </p>
       </div>
     </section>
-  );
+  )
 }
+
+export default CTA

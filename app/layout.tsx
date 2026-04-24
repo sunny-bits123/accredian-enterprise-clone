@@ -1,43 +1,37 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Accredian Enterprise - Professional Learning Platform",
-  description:
-    "Transform your career with Accredian. Access 1000+ courses, get certified, and land your dream job. Join 500K+ professionals.",
-  keywords:
-    "online courses, professional development, career growth, certifications",
-  authors: [{ name: "Accredian" }],
-  viewport: "width=device-width, initial-scale=1",
-};
+  title: 'Accredian Enterprise - Transform Your Learning',
+  description: 'Enterprise learning platform for modern teams and organizations',
+  keywords: 'learning, enterprise, courses, skills, professional development',
+  viewport: 'width=device-width, initial-scale=1',
+  openGraph: {
+    type: 'website',
+    url: 'https://accredian-enterprise-clone.vercel.app',
+    title: 'Accredian Enterprise - Transform Your Learning',
+    description: 'Enterprise learning platform for modern teams and organizations',
+  },
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="bg-dark text-white">
+        {children}
       </body>
     </html>
-  );
+  )
 }

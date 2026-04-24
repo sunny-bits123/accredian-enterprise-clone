@@ -1,75 +1,84 @@
-"use client";
-
-export default function Benefits() {
+const Benefits = () => {
   const benefits = [
-    {
-      title: "Accelerated Growth",
-      description: "40% faster skill development with personalized learning paths",
-    },
-    {
-      title: "Better Outcomes",
-      description: "95% of learners achieve their career goals within 6 months",
-    },
-    {
-      title: "Cost Effective",
-      description: "Save up to 60% on training costs compared to traditional methods",
-    },
-  ];
-
-  const metrics = [
-    { number: "10K+", label: "Companies Trust Us" },
-    { number: "500K+", label: "Professionals Trained" },
-    { number: "150+", label: "Countries Served" },
-    { number: "4.9/5", label: "Average Rating" },
-  ];
+    { label: '10K+', value: 'Enterprise Clients' },
+    { label: '500K+', value: 'Professionals Upskilled' },
+    { label: '1000+', value: 'Expert Instructors' },
+    { label: '50+', value: 'Industry Partnerships' },
+  ]
 
   return (
-    <section id="benefits" className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-fadeIn">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Business <span className="gradient-text">Impact</span>
+    <section id="benefits" className="section">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            Why Choose <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Accredian?</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Real results from real companies using Accredian
+          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+            Join thousands of companies that trust us with their learning and development.
           </p>
         </div>
 
-        {/* Benefits Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* Key Statistics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="p-8 rounded-xl gradient-secondary text-white hover:shadow-2xl transition transform hover:scale-105"
-              style={{
-                animation: `slideUp 0.6s ease-out ${index * 0.1}s both`,
-              }}
-            >
-              <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
-              <p className="text-sm opacity-90">{benefit.description}</p>
+            <div key={index} className="glass rounded-lg p-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                {benefit.label}
+              </div>
+              <p className="text-slate-400 text-sm">{benefit.value}</p>
             </div>
           ))}
         </div>
 
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {metrics.map((metric, index) => (
-            <div
-              key={index}
-              className="p-6 bg-white rounded-lg shadow-md text-center"
-              style={{
-                animation: `slideUp 0.6s ease-out ${index * 0.1}s both`,
-              }}
-            >
-              <p className="text-3xl md:text-4xl font-bold gradient-text mb-2">
-                {metric.number}
-              </p>
-              <p className="text-gray-600">{metric.label}</p>
-            </div>
-          ))}
+        {/* Benefits Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+          <div className="rounded-2xl p-8 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700">
+            <h3 className="text-2xl font-bold mb-4">📈 Measurable ROI</h3>
+            <ul className="space-y-3 text-slate-300">
+              <li className="flex items-start">
+                <span className="text-primary mr-3 font-bold">✓</span>
+                <span>Increase employee productivity by up to 40%</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3 font-bold">✓</span>
+                <span>Reduce time-to-competency significantly</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3 font-bold">✓</span>
+                <span>Improve employee retention rates</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3 font-bold">✓</span>
+                <span>Lower hiring and training costs</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="rounded-2xl p-8 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700">
+            <h3 className="text-2xl font-bold mb-4">🎓 Learning Excellence</h3>
+            <ul className="space-y-3 text-slate-300">
+              <li className="flex items-start">
+                <span className="text-primary mr-3 font-bold">✓</span>
+                <span>Industry-expert instructors and content</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3 font-bold">✓</span>
+                <span>Personalized learning recommendations</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3 font-bold">✓</span>
+                <span>Hands-on projects and real-world case studies</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3 font-bold">✓</span>
+                <span>Continuous content updates and improvements</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
+
+export default Benefits
